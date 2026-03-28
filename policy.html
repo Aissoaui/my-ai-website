@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Policy - Swayedkh</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="templatemo-electric-xtra.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 100px;
+        }
+        
+        .policy-page {
+            padding: 60px 20px 100px;
+            position: relative;
+            z-index: 10;
+            min-height: 100vh;
+        }
+        
+        .policy-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .policy-section {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 94, 0, 0.2);
+            border-radius: 30px;
+            padding: 60px;
+            margin-bottom: 50px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        }
+        
+        .policy-section h1 {
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 50px;
+            background: linear-gradient(135deg, #FF5E00, #00B2FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 30px rgba(255, 94, 0, 0.4));
+        }
+        
+        .policy-section h2 {
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(1.3rem, 3vw, 2rem);
+            color: #FF5E00;
+            margin: 40px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(255, 94, 0, 0.3);
+        }
+        
+        .policy-section h2:first-of-type {
+            margin-top: 0;
+        }
+        
+        .policy-section h3 {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.2rem;
+            color: #00B2FF;
+            margin: 30px 0 15px;
+        }
+        
+        .policy-section p {
+            line-height: 1.9;
+            opacity: 0.85;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .policy-section ul {
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .policy-section ul li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+            opacity: 0.85;
+            font-size: 1.1rem;
+        }
+        
+        .policy-section ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 15px;
+            height: 15px;
+            background: linear-gradient(135deg, #FF5E00, #00B2FF);
+            border-radius: 50%;
+        }
+        
+        .policy-section a {
+            color: #FF5E00;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .policy-section a:hover {
+            color: #00B2FF;
+            text-shadow: 0 0 15px rgba(0, 178, 255, 0.5);
+        }
+        
+        .career-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 94, 0, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 20px 0;
+            transition: all 0.3s ease;
+        }
+        
+        .career-card:hover {
+            transform: translateY(-5px);
+            border-color: #FF5E00;
+            box-shadow: 0 15px 40px rgba(255, 94, 0, 0.2);
+        }
+        
+        .career-card h4 {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+        
+        .career-card p {
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .policy-section {
+                padding: 40px 25px;
+            }
+            
+            .policy-page {
+                padding: 120px 15px 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="glow-orb glow-orb-1"></div>
+    <div class="glow-orb glow-orb-2"></div>
+    <canvas id="three-canvas"></canvas>
+    <div class="neon-overlay"></div>
+
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo-link">
+                <svg class="logo-svg" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#FF5E00;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#00B2FF;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <polygon points="20,2 38,14 38,26 20,38 2,26 2,14" fill="none" stroke="url(#logoGradient)" stroke-width="2"/>
+                    <polygon points="20,8 32,16 32,24 20,32 8,24 8,16" fill="url(#logoGradient)" opacity="0.3"/>
+                    <circle cx="20" cy="20" r="3" fill="url(#logoGradient)"/>
+                </svg>
+                <span class="logo-text">Swayedkh</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="policy.html" class="nav-link active">Policy</a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="policy-page">
+        <div class="policy-container">
+            <div class="policy-section">
+                <h1>Privacy Policy</h1>
+                <p class="legal-date" style="text-align: center; color: #FF5E00; margin-bottom: 40px; letter-spacing: 2px;">Last Updated: March 2025</p>
+                
+                <h2>1. Information We Collect</h2>
+                <p>We respect your privacy and are committed to protecting your personal information. Any data collected through our website or campaigns is used strictly to enhance our services and will never be sold to third parties.</p>
+                
+                <h2>2. How We Use Your Information</h2>
+                <p>By engaging with Swayedkh, you consent to the responsible handling of your data in accordance with international standards. We use your information to:</p>
+                <ul>
+                    <li>Provide and improve our influencer marketing services</li>
+                    <li>Communicate with you about campaigns and partnerships</li>
+                    <li>Analyze campaign performance and generate reports</li>
+                    <li>Process inquiries and support requests</li>
+                </ul>
+                
+                <h2>3. Data Protection</h2>
+                <p>We implement industry-standard security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction.</p>
+                
+                <h2>4. Third-Party Services</h2>
+                <p>We may engage third-party service providers to assist in operating our website and conducting our business. These providers have access to your personal information only to perform tasks on our behalf.</p>
+                
+                <h2>5. Cookies</h2>
+                <p>Our website may use cookies to enhance your browsing experience. You can choose to disable cookies through your browser settings, though this may affect website functionality.</p>
+                
+                <h2>6. Your Rights</h2>
+                <p>You have the right to access, correct, or delete your personal information. Contact us at <a href="mailto:hello@swayedkhai.com">hello@swayedkhai.com</a> for any privacy-related requests.</p>
+                
+                <h2>7. Contact Us</h2>
+                <p>If you have questions about this Privacy Policy, please contact us:</p>
+                <p><strong>Email:</strong> <a href="mailto:hello@swayedkhai.com">hello@swayedkhai.com</a></p>
+                <p><strong>Phone:</strong> +213 0654765463</p>
+            </div>
+
+            <div class="policy-section">
+                <h1>Terms of Service</h1>
+                <p class="legal-date" style="text-align: center; color: #FF5E00; margin-bottom: 40px; letter-spacing: 2px;">Last Updated: March 2025</p>
+                
+                <h2>1. Acceptance of Terms</h2>
+                <p>By using our services, you agree to abide by these terms. Clients and partners must respect intellectual property, follow collaboration guidelines, and avoid misuse of our platform.</p>
+                
+                <h2>2. Services Provided</h2>
+                <p>Swayedkh is an influencer marketing agency dedicated to helping brands connect with audiences through authentic and creative collaborations. Our services include:</p>
+                <ul>
+                    <li>Influencer marketing strategy development</li>
+                    <li>Creator matching and partnership facilitation</li>
+                    <li>Campaign management and execution</li>
+                    <li>Analytics and performance reporting</li>
+                </ul>
+                
+                <h2>3. Client Responsibilities</h2>
+                <p>Clients agree to:</p>
+                <ul>
+                    <li>Provide accurate brand information and campaign requirements</li>
+                    <li>Respect intellectual property rights of influencers and creators</li>
+                    <li>Make timely payments for agreed-upon services</li>
+                    <li>Follow collaboration guidelines and platform policies</li>
+                </ul>
+                
+                <h2>4. Influencer & Creator Guidelines</h2>
+                <p>Influencers and creators working with Swayedkh agree to:</p>
+                <ul>
+                    <li>Maintain authentic engagement and genuine content creation</li>
+                    <li>Disclose sponsored content according to legal requirements</li>
+                    <li>Meet agreed-upon deliverables and deadlines</li>
+                    <li>Respect confidentiality of campaign details</li>
+                </ul>
+                
+                <h2>5. Intellectual Property</h2>
+                <p>All creative content, strategies, and materials developed by Swayedkh remain our intellectual property unless otherwise agreed upon in writing. Clients receive usage rights for campaign materials as specified in individual agreements.</p>
+                
+                <h2>6. Payment Terms</h2>
+                <p>Payment terms are outlined in individual service agreements. Late payments may result in suspension of services. Refunds are subject to the specific terms of each campaign contract.</p>
+                
+                <h2>7. Limitation of Liability</h2>
+                <p>Swayedkh strives to deliver results but cannot guarantee specific outcomes from influencer marketing campaigns. We are not liable for indirect, incidental, or consequential damages arising from our services.</p>
+                
+                <h2>8. Termination</h2>
+                <p>Either party may terminate services with written notice as specified in individual agreements. Swayedkh reserves the right to terminate relationships that violate these terms or engage in harmful practices.</p>
+            </div>
+
+            <div class="policy-section">
+                <h1>Careers</h1>
+                <p class="legal-date" style="text-align: center; color: #FF5E00; margin-bottom: 40px; letter-spacing: 2px;">Join Our Team</p>
+                
+                <p>Join our growing team of creative minds passionate about influencer marketing. We're always looking for talented individuals who want to make an impact in the digital world.</p>
+                
+                <h2>Open Positions</h2>
+                
+                <div class="career-card">
+                    <h4>Influencer Marketing Strategist</h4>
+                    <p><strong>Location:</strong> Remote / Algeria | <strong>Type:</strong> Full-time</p>
+                    <p>Develop comprehensive influencer marketing campaigns that drive real results for our clients.</p>
+                </div>
+                
+                <div class="career-card">
+                    <h4>Content Creator Manager</h4>
+                    <p><strong>Location:</strong> Remote / Algeria | <strong>Type:</strong> Full-time</p>
+                    <p>Lead creative direction for campaigns and manage relationships with our network of content creators.</p>
+                </div>
+                
+                <div class="career-card">
+                    <h4>Social Media Manager</h4>
+                    <p><strong>Location:</strong> Remote / Algeria | <strong>Type:</strong> Full-time</p>
+                    <p>Manage social media presence and support client social strategies.</p>
+                </div>
+                
+                <div class="career-card">
+                    <h4>Campaign Analyst</h4>
+                    <p><strong>Location:</strong> Remote / Algeria | <strong>Type:</strong> Full-time</p>
+                    <p>Turn data into actionable insights that drive campaign success and demonstrate ROI.</p>
+                </div>
+                
+                <h2>What We Offer</h2>
+                <ul>
+                    <li>Competitive salary and performance bonuses</li>
+                    <li>Flexible remote work options</li>
+                    <li>Opportunities for professional growth</li>
+                    <li>Work with exciting brands and creators</li>
+                    <li>Creative and collaborative team environment</li>
+                </ul>
+                
+                <h2>How to Apply</h2>
+                <p>Interested? Send your CV and a brief introduction telling us why you'd be a great fit.</p>
+                <p><strong>Email:</strong> <a href="mailto:info@swayedkhai.agency">info@swayedkhai.agency</a></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html">Back to Home</a>
+            </div>
+            <p class="copyright">© 2025 Swayedkh. All rights reserved. Elevating brands through influencer marketing.</p>
+        </div>
+    </footer>
+
+    <script src="templatemo-electric-scripts.js"></script>
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        if (menuToggle) {
+            menuToggle.addEventListener('click', () => {
+                menuToggle.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+        }
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (menuToggle) menuToggle.classList.remove('active');
+                if (navLinks) navLinks.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
